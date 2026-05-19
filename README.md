@@ -1,0 +1,1 @@
+## This is a text classification project using Simple RNN on the IMDB dataset.
