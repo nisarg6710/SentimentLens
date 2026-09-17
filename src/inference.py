@@ -1,18 +1,8 @@
-from pathlib import Path
-
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-MODEL_PATH = (
-    PROJECT_ROOT
-    / "notebooks"
-    / "checkpoints"
-    / "pretrained_transformer"
-    / "distilbert_best"
-)
+MODEL_NAME = "nisarggccp0176/imdb-distilbert-sentiment"
 
 MAX_LENGTH = 500
 
@@ -26,11 +16,11 @@ class SentimentInference:
         print(f"Using device: {self.device}")
 
         self.tokenizer = AutoTokenizer.from_pretrained(
-            MODEL_PATH
+            MODEL_NAME
         )
 
         self.model = AutoModelForSequenceClassification.from_pretrained(
-            MODEL_PATH
+            MODEL_NAME
         )
 
         self.model.to(self.device)

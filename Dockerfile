@@ -8,8 +8,8 @@ RUN pip install --no-cache-dir -r requirements-docker.txt
 
 COPY src ./src
 COPY configs ./configs
-COPY notebooks/checkpoints/pretrained_transformer/distilbert_best \
-     ./notebooks/checkpoints/pretrained_transformer/distilbert_best
+# COPY notebooks/checkpoints/pretrained_transformer/distilbert_best \
+#      ./notebooks/checkpoints/pretrained_transformer/distilbert_best
 
 EXPOSE 8000
 
