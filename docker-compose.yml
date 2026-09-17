@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: imdb-sentiment-api
+
+    ports:
+      - "8000:8000"
+
+    mem_limit: 3g
+    cpus: 2
+
+    restart: unless-stopped
+
+# docker compose up -d
+## switching from docker run to docker compose

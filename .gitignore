@@ -1,1 +1,54 @@
 venv/
+
+PROJECT_DOCUMENTATION.md
+
+test_notebooks/
+
+dfile/
+
+somePics.ipynb
+
+random_test.ipynb
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+logs/
+*.log
+
+# Local data
+data/
+*.csv
+!experiments/experiments.csv
+
+
+
+
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

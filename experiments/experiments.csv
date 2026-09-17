@@ -1,0 +1,6 @@
+timestamp,model,accuracy,precision,recall,f1,roc_auc,brier_score,parameters,notes
+2026-09-13T12:11:49,Simple RNN,0.7545,0.7668,0.7314,0.7487,0.8202,,,Final test evaluation
+2026-09-13T12:11:49,LSTM,0.8373,0.8191,0.8659,0.8418,0.9124,,,Final test evaluation
+2026-09-13T12:11:49,BiLSTM,0.8542,0.8641,0.8406,0.8522,0.9324,,,Final test evaluation
+2026-09-13T12:11:49,Transformer,0.8458,0.847,0.8441,0.8455,0.9261,0.1094,,Final test evaluation
+2026-09-13T12:11:49,DistilBERT,0.9297,0.9216,0.9393,0.9303,0.9798,0.0586,max_length=500; batch_size=8; learning_rate=1e-5; weight_decay=0.01; epochs=3; seed=42; best_epoch=2,Final test evaluation
