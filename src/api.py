@@ -14,8 +14,15 @@ app = FastAPI(
 )
 
 
-# Load the model once when the API starts
-sentiment_model = SentimentInference()
+sentiment_model = None
+
+def get_sentiment_model():
+    global sentiment_model
+
+    if sentiment_model is None:
+        sentiment_model = SentimentInference()
+
+    return sentiment_model
 
 
 class PredictionRequest(BaseModel):
@@ -49,7 +56,9 @@ def predict(request: PredictionRequest):
     start_time = time.perf_counter()
 
     try:
-        result = sentiment_model.predict(request.text)
+        model = get_sentiment_model()
+
+        result = model.predict(request.text)
 
         elapsed_time = time.perf_counter() - start_time
 
