@@ -9,8 +9,8 @@ from src.inference import SentimentInference
 # --------------------------------------------------
 
 st.set_page_config(
-    page_title="Customer Voice AI",
-    page_icon="🎬",
+    page_title="SentimentLens",
+    page_icon="🔎",
     layout="wide",
 )
 
@@ -98,9 +98,12 @@ if "batch_results" not in st.session_state:
 st.markdown(
     """
     <div class="hero">
-        <h1>🎬 Customer Voice AI</h1>
+        <h1>🔎 SentimentLens</h1>
         <p>
-            AI-powered sentiment intelligence for customer feedback.
+            Customer Voice Intelligence Platform
+        </p>
+        <p style="font-size: 1rem; opacity: 0.7;">
+            Turn customer feedback into actionable sentiment insights.
         </p>
     </div>
     """,
@@ -108,7 +111,7 @@ st.markdown(
 )
 
 st.caption(
-    "Demonstration powered by the IMDB benchmark dataset."
+    "AI-powered sentiment analysis demonstrated using the IMDB benchmark dataset."
 )
 
 
@@ -141,7 +144,7 @@ with st.sidebar:
     st.divider()
 
     st.caption(
-        "Fine-tuned Transformer model for movie-review "
+        "Fine-tuned Transformer model for customer feedback "
         "sentiment classification."
     )
 
